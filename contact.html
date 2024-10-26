@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Kathan Bhavsar - Get in touch for collaborations and inquiries">
+    <meta name="keywords" content="Contact, Portfolio, Kathan Bhavsar">
+    <title>Kathan Bhavsar - Contact</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./KB.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Additional Contact Page Styles -->
+    <style>
+        .contact-container {
+            padding: 120px 0 80px 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: calc(100vh - 56px);
+        }
+
+        .contact-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .contact-info-card {
+            text-align: center;
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 15px;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-info-card:hover {
+            background: #007bff;
+            color: white;
+        }
+
+        .contact-info-card i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #007bff;
+        }
+
+        .contact-info-card:hover i {
+            color: white;
+        }
+
+        .form-control {
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            border: 2px solid #e1e1e1;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+
+        .social-links {
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #007bff;
+            color: white;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-3px);
+            background: #0056b3;
+        }
+
+        .map-container {
+            border-radius: 15px;
+            overflow: hidden;
+            height: 300px;
+            margin-top: 2rem;
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .contact-header h2 {
+            color: #333;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .contact-header p {
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .map-section {
+        margin-bottom: 80px;
+        padding: 20px;
+        }
+        
+        .location-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .location-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .location-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .location-icon {
+            margin-bottom: 1.5rem;
+        }
+        
+        .location-icon i {
+            font-size: 3.5rem;
+            color: #007bff;
+        }
+        
+        .location-details h4 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .location-details p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .location-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+        
+        .location-actions .btn {
+            padding: 0.75rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .location-actions i {
+            font-size: 1.1rem;
+        }
+        
+        /* Add some visual feedback on hover */
+        .btn:hover {
+            transform: translateY(-2px);
+            transition: transform 0.2s ease;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 576px) {
+            .location-actions {
+                flex-direction: column;
+            }
+            
+            .location-card {
+                padding: 1.5rem;
+            }
+            
+            .location-details p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-dark text-white fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="./KB.png" alt="KB Logo" width="50" height="50" class="mr-2">
+                <span>Kathan Bhavsar</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            <i class="fas fa-user"></i> About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">
+                            <i class="fas fa-sign-in-alt"></i> Login
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="contact.html">
+                            <i class="fas fa-envelope"></i> Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="contact-container">
+        <div class="container">
+            <div class="contact-header">
+                <h2>Get in Touch</h2>
+                <p>Have a question or want to work together? Feel free to reach out!</p>
+            </div>
+
+            <div class="row">
+                <!-- Contact Information -->
+                <div class="col-md-4">
+                    <div class="contact-info-card">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Email</h4>
+                        <p>kathan7104@gmail.com</p>
+                    </div>
+                    <div class="contact-info-card">
+                        <i class="fas fa-phone"></i>
+                        <h4>Phone</h4>
+                        <p>+91 9265826450</p>
+                    </div>
+                    <div class="contact-info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="text-center mt-4">
+                            <h4>My Location</h4>
+                            <p>KB ROYAL PHOENIX, Chandkheda, Ahmedabad, Gujarat</p>
+                            <a href="https://www.google.com/maps/place/BLOCK-B,+KB+ROYAL+PHOENIX,+Sneh+Plaza+Rd,+Chandkheda,+Ahmedabad,+Gujarat+382424/@23.1215531,72.5691902,17.75z/data=!4m6!3m5!1s0x395e8259dbf7ae03:0x50d17f822822300e!8m2!3d23.1204199!4d72.5718476!16s%2Fg%2F11ggk36fb0?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="btn btn-primary">
+                                <i class="fas fa-map-marker-alt"></i> View on Google Maps
+                            </a>
+                        </div>
+                    </div>
+                    <div class="social-links text-center">
+                        <a href="https://www.linkedin.com/in/kathan-bhavsar-3926a52b6/" target="_blank">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/kathan7104" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="col-md-8">
+                    <div class="contact-card">
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for ="name">Name:</label>
+                                        <input type="text" id="name" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="email">Email:</label>
+                                        <input type="email" id="email" class="form-control" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message:</label>
+                                <textarea id="message" class="form-control" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white fixed-bottom">
+        <p>&copy; 2024 Kathan Bhavsar. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1 .0">
+    <title>Kathan Bhavsar - Contact</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="bg-dark text-white fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="index.html">
+                    <img src="./KB.png" alt="KB Logo" width="50" height="50">
+                    Kathan Bhavsar
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                <i class="fas fa-home"></i> Home
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">
+                                <i class="fas fa-user"></i> About
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">
+                                <i class="fas fa-sign-in-alt"></i> Login
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="contact.html">
+                                <i class="fas fa-envelope"></i> Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section id="contact" class="mt-6">
+            <h2>Get in Touch</h2>
+            <p>Feel free to reach out to me for any queries or collaborations.</p>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" class="form-control"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+        </section>
+        <br><br><br>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Email: kathan7104@gmail.com</p>
+            <p>Phone: 9265826450</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/kathan-bhavsar-3926a52b6/">Kathan Bhavsar</a></p>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center fixed-bottom">
+        <p>&copy; 2024 Kathan Bhavsar. All rights reserved.</p>
+    </footer>
+
+    <script src="./js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html> -->
+<!-- Map -->
+<!--  
+<div class="row mt-5">
+    <div class="col-12">
+        <div class="map-section">
+            <h3 class="text-center mb-4">My Location</h3>
+            <div class="location-container">
+                <div class="location-card">
+                    <div class="location-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="location-details">
+                        <h4>KB ROYAL PHOENIX</h4>
+                        <p>BLOCK-B, KB ROYAL PHOENIX, Sneh Plaza Rd,<br>
+                           Chandkheda, Ahmedabad, Gujarat 382424</p>
+                        <div class="location-actions">
+                            <a href="https://www.google.com/maps/place/BLOCK-B,+KB+ROYAL+PHOENIX,+Sneh+Plaza+Rd,+Chandkheda,+Ahmedabad,+Gujarat+382424/@23.1215531,72.5691902,17.75z/data=!4m6!3m5!1s0x395e8259dbf7ae03:0x50d17f822822300e!8m2!3d23.1204199!4d72.5718476!16s%2Fg%2F11ggk36fb0?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="btn btn-primary">
+                                <i class="fas fa-directions"></i> Get Directions
+                            </a>
+                            <a href="tel:+919265826450" class="btn btn-outline-primary">
+                                <i class="fas fa-phone"></i> Call Me
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
