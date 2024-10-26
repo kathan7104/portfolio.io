@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Kathan Bhavsar - MCA Student Portfolio">
+    <meta name="keywords" content="Kathan Bhavsar, Portfolio, About, Skills, Education">
+    <title>Kathan Bhavsar - About Me</title>
+    
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./KB.png">
+
+    <style>
+        /* Custom Styles */
+        .about-container {
+            padding-top: 80px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        .profile-section {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-section:hover {
+            transform: translateY(-5px);
+        }
+
+        .section-title {
+            color: #333;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            margin: 0.3rem;
+            background: #f8f9fa;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .skill-badge:hover {
+            background: #007bff;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 2rem;
+            border-left: 2px solid #007bff;
+        }
+
+        .timeline-item:before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 0;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: #007bff;
+        }
+
+        .project-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 1.5rem;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .tech-stack .badge {
+            margin: 0.2rem;
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #007bff;
+            color: white;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            transform: translateY(-3px);
+            background: #0056b3;
+        }
+
+        .achievements-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .achievements-list li {
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .achievements-list li:hover {
+            background: #e9ecef;
+            transform: translateX(10px);
+        }
+
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .skill-container {
+            margin-bottom: 2rem;
+        }
+
+        .skill-category h5 {
+            color: #007bff;
+            margin-bottom: 1rem;
+        }
+
+        .progress-container {
+            background: #f8f9fa;
+            border-radius: 20px;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: #007bff;
+            border-radius: 20px;
+            transition: width 1s ease-in-out;
+        }
+
+        @media (max-width: 768px) {
+            .about-container {
+                padding-top: 60px;
+            }
+
+            .profile-image {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-dark text-white fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-dark container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="./KB.png" alt="KB Logo" width="50" height="50" class="mr-2">
+                <span>Kathan Bhavsar</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="about.html">
+                            <i class="fas fa-user"></i> About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">
+                            <i class="fas fa-sign-in-alt"></i> Login
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            <i class="fas fa-envelope"></i> Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="about-container">
+        <div class="container py-5">
+            <!-- Profile Section -->
+            <section class="profile-section text-center">
+                <img src="./KB.png" alt="Kathan Bhavsar" class="profile-image">
+                <h2 class="mb-3">Kathan Bhavsar</h2>
+                <p class="lead mb-4">MCA Student | Aspiring&nbsp;
+                    <span class="typed" data-typed-items="Designer, Developer, Data Scientist"></span>
+                </p>
+                <p class="text-muted">Passionate about leveraging data to derive meaningful insights and solve complex problems.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/kathan-bhavsar-3926a52b6/" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/kathan7104" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section class="education-section">
+                <h3 class="section-title">Education</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>Master of Computer Applications (MCA)</h4>
+                        <p><i class="fas fa-university"></i> Chimanbhai Patel Institute</p>
+                        <p><i class="far fa-calendar-alt"></i> 2024-2026 (Expected)</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Bachelor of Computer Applications (BCA)</h4>
+                        <p><i class="fas fa-university"></i> Shreyarth University</p>
+                        <p><i class="far fa-calendar-alt"></i> 2021-2024</p>
+                        <p><i class="fas fa-star"></i> CGPA: 8.70/10.0</p>
+                        <p>Relevant Coursework: Database Management Systems, Data Structures and Algorithms, Programming in Python, Statistics and Probability</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="skills-section">
+                <h3 class="section-title">Technical Skills</h3>
+                <div class="skill-container">
+                    <div class="skill-category">
+                        <h5>Programming Languages</h5>
+                        <div class="progress-container">
+                            <span class="skill-badge">Python <div class="progress-bar" style="width: 90%"></div></span>
+                            <span class="skill-badge">Java <div class="progress-bar" style="width: 85%"></div></span>
+                            <span class="skill-badge">C/C++ <div class="progress-bar" style="width: 80%"></div></span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h5>Web Technologies</h5>
+                        <div class="progress-container">
+                            <span class="skill-badge">HTML5/CSS3 <div class="progress-bar" style="width: 85%"></div></span>
+                            <span class="skill-badge">JavaScript <div class="progress-bar" style="width: 75%"></div></span>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h5>Database & Tools</h5>
+                        <div class="progress-container">
+                            <span class="skill-badge">DBMS <div class="progress-bar" style="width: 88%"></div></span>
+                            <span class="skill-badge">Git <div class="progress-bar" style="width: 80%"></div></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section class="projects-section">
+                <h3 class="section-title">Academic Projects</h3>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <div class="project-card">
+                            <h4>Job Portal <span class="badge badge-primary">Python Flask</span></h4>
+                            <p class="project-description">Web-based job portal with authentication, job posting, and search functionality.</p>
+                            <div class="tech-stack">
+                                <span class="badge badge-secondary">Python</span>
+                                <span class="badge badge-secondary">Flask</span>
+                                <span class="badge badge-secondary">SQLAlchemy</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <div class="project-card">
+                            <h4>Mobile Store Inventory Management System <span class="badge badge-primary">Java Swing</span></h4>
+                            <p class="project-description">Desktop application for managing inventory in a mobile store with sales recording and reporting features.</p>
+                            <div class="tech-stack">
+                                <span class="badge badge-secondary">Java</span>
+                                <span class="badge badge-secondary">Swing</span>
+                                <span class="badge badge-secondary">JDBC</span>
+                            </div>
+                        </div>
+                    </div>
+                </ div>
+            </section>
+
+            <!-- Achievements Section -->
+            <section class="achievements-section">
+                <h3 class="section-title">Achievements</h3>
+                <ul class="achievements-list">
+                    <li>Secured 8.70 CGPA in BCA from Shreyarth University</li>
+                    <li>Participated in Code Marathon at TechFest 2024, Indus University</li>
+                    <li>Successfully competed in the Debugging Competition at TechFest 2024, Indus University</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white fixed-bottom">
+        <p>&copy; 2024 Kathan Bhavsar. All rights reserved.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kathan Bhavsar - MCA Student Portfolio and Professional Profile">
+    <meta name="keywords" content="Kathan Bhavsar, MCA, Portfolio, Computer Applications, Developer">
+    <title>Kathan Bhavsar - About Me</title>
+    
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="../academic portfolio/css/style.css">
+    
+    
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    
+    <header class="bg-dark text-white fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="index.html">
+                    <img src="./KB.png" alt="KB Logo" width="50" height="50">
+                    Kathan Bhavsar
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                <i class="fas fa-home"></i> Home
+                            </a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="about.html">
+                                <i class="fas fa-user"></i> About
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">
+                                <i class="fas fa-sign-in-alt"></i> Login
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">
+                                <i class="fas fa-envelope"></i> Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mt-5 pt-5">
+        <section id="about" class="animate-on-scroll">
+            
+            <div class="row mb-5">
+                <div class="col-md-8">
+                    <h2 class="section-title border-bottom pb-2">Kathan Bhavsar</h2>
+                    <p class="lead">BCA graduate with a strong academic background, currently pursuing MCA. Passionate about leveraging data to derive meaningful insights and solve complex problems.</p>
+                    <div class="social-links mt-3">
+                        <a href="https://www.linkedin.com/in/kathan-bhavsar-3926a52b6/" class="btn btn-outline-primary"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h3 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <h4>Master of Computer Applications (MCA)</h4>
+                            <p><i class="fas fa-university"></i> Chimanbhai Patel Institute</p>
+                            <p><i class="far fa-calendar-alt"></i> 2024-2026 (Expected)</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>Bachelor of Computer Applications (BCA)</h4>
+                            <p><i class="fas fa-university"></i> Shreyarth University</p>
+                            <p><i class="far fa-calendar-alt"></i> 2021-2024</p>
+                            <p><i class="fas fa-star"></i> CGPA: 8.70/10.0</p>
+                            <p>Relevant Coursework: Database Management Systems, Data Structures and Algorithms, Programming in Python, Statistics and Probability</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h3 class="section-title"><i class="fas fa-code"></i> Technical Skills</h3>
+                    <div class="skill-container">
+                        <div class="skill-category">
+                            <h5>Programming Languages</h5>
+                            <div class="progress-container">
+                                <span class="skill-badge">Python <div class="progress-bar" style="width: 90%"></div></span>
+                                <span class="skill-badge">Java <div class="progress-bar" style="width: 85%"></div></span>
+                                <span class="skill-badge">C/C++ <div class="progress-bar" style="width: 80%"></div></span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h5>Web Technologies</h5>
+                            <div class="progress-container">
+                                <span class="skill-badge">HTML5/CSS3 <div class="progress-bar" style="width: 85%"></div></span>
+                                <span class="skill-badge">JavaScript <div class="progress-bar" style="width: 75%"></div></span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h5>Database & Tools</h5>
+                            <div class="progress-container">
+                                <span class="skill-badge">DBMS <div class="progress-bar" style="width: 88%"></div></span>
+                                <span class="skill-badge">Git <div class="progress-bar" style="width: 80%"></div></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h3 class="section-title"><i class="fas fa-project-diagram"></i> Academic Projects</h3>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="project-card">
+                                <h4>Job Portal <span class="badge badge-primary">Python Flask</span></h4>
+                                <p class="project-description">Web-based job portal with authentication, job posting, and search functionality.</p>
+                                <div class="tech-stack">
+                                    <span class="badge badge-secondary">Python</span>
+                                    <span class="badge badge-secondary">Flask</span>
+                                    <span class="badge badge-secondary">SQLAlchemy</span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <div class="project -card">
+                                <h4>Mobile Store Inventory Management System <span class="badge badge-primary">Java Swing</span></h4>
+                                <p class="project-description">Desktop application for managing inventory in a mobile store with sales recording and reporting features.</p>
+                                <div class="tech-stack">
+                                    <span class="badge badge-secondary">Java</span>
+                                    <span class="badge badge-secondary">Swing</span>
+                                    <span class="badge badge-secondary">JDBC</span>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             Achievements Section
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <h3 class="section-title"><i class="fas fa-trophy"></i> Achievements</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item">Secured 8.70 CGPA in BCA from Shreyarth University</li>
+                        <li class="list-group-item">Participated in Code Marathon at TechFest 2024, Indus University</li>
+                        <li class="list-group-item">Successfully competed in the Debugging Competition at TechFest 2024, Indus University</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    Footer
+    <footer class="bg-dark text-white text-center fixed-bottom">
+        <p>&copy; 2024 Kathan Bhavsar. All rights reserved.</p>
+    </footer>
+
+     JavaScript Links
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
+ -->
